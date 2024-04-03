@@ -3,11 +3,33 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AbBotao } from '../src';
 import { AbCard } from '../src/components/AbCard';
-
+import { AbTag } from '../src/components/AbTag';
+import { AbGroupOptions } from '../src/components/AbGroupOptions';
+const opcones = [
+  {
+      id: 1,
+      titulo: 'E-book',
+      corpo: 'R$ 00,00',
+      rodape: '.pdf, .epub, .mob'
+  },
+  {
+      id: 2,
+      titulo: 'Impresso',
+      corpo: 'R$ 00,00',
+      rodape: '.pdf, .epub, .mob'
+  },
+  {
+      id: 3,
+      titulo: 'Impresso + E-book',
+      corpo: 'R$ 00,00',
+      rodape: '.pdf, .epub, .mob'
+  }
+]
 const App = () => {
   return (
-    <div>
-      <AbBotao/>
+    <>
+      <AbGroupOptions opcoes={opcones}/>
+      <AbBotao texto='Botao primario dahora boladão'/>
       <AbCard>
         <div>
             <h2>Sobre o Livro:</h2>
@@ -22,7 +44,8 @@ const App = () => {
             </div>
         </div>
       </AbCard>
-    </div>
+      <AbTag texto='faz o l'/>
+    </>
   );
 };
 
